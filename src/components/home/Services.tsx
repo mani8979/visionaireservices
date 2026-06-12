@@ -54,7 +54,7 @@ export default function Services({ data }: ServicesProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`group relative overflow-hidden bg-secondary/5 rounded-sm h-fit ${index === 0 || index === 3 ? "md:col-span-2 lg:col-span-2" : ""}`}
+              className="group relative overflow-hidden bg-secondary/5 rounded-sm h-fit"
             >
               <Link href={service.link || "#"} className="block w-full">
                 <Image
