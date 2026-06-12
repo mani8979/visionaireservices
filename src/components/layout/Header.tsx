@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { WhatsAppIcon } from "../icons/WhatsAppIcon";
@@ -10,6 +11,7 @@ import { WhatsAppIcon } from "../icons/WhatsAppIcon";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +40,12 @@ export default function Header() {
     >
       <div className="max-w-[90rem] mx-auto px-6 lg:px-12 flex justify-between items-center gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+        <Link href="/" onClick={(e) => {
+          if (pathname === "/") {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }} className="flex items-center gap-3 flex-shrink-0">
           <Image src="/images/logo.jpeg" alt="Visionaire Logo" width={48} height={48} className="rounded-full object-cover shadow-sm" />
           <span className="font-serif text-xl md:text-2xl tracking-widest uppercase font-bold text-primary whitespace-nowrap">
             Visionaire
@@ -54,6 +61,12 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.href}
+              onClick={(e) => {
+                if (link.href === pathname || (link.href === "/" && pathname === "/")) {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className="text-xs font-semibold uppercase tracking-[0.15em] text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap"
             >
               {link.name}
@@ -104,7 +117,13 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setIsMobileMenuOpen(false);
+                  if (link.href === pathname || (link.href === "/" && pathname === "/")) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
                 className="text-lg font-medium text-primary hover:text-accent transition-colors tracking-wide"
               >
                 {link.name}
