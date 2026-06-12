@@ -22,8 +22,8 @@ export default function PuttyPaintingClient({ data }: Props) {
     <div className="bg-secondary text-primary">
       {/* Hero Section */}
       <section className="relative h-[70vh] md:h-[85vh] w-full flex items-center justify-center overflow-hidden">
-        <div className="w-full h-auto relative flex">
-          <Image src={data?.heroImageUrl || "/images/putty_painting.png"} alt="Putty Painting Hero" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain object-center"
+        <div className="absolute inset-0 z-0">
+          <Image src={data?.heroImageUrl || "/images/putty_painting.png"} alt="Putty Painting Hero" fill className="object-contain object-center"
             priority
           />
           <div className="absolute inset-0 bg-primary/50"></div>

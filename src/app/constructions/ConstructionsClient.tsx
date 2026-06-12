@@ -31,8 +31,8 @@ export default function ConstructionsClient({ data }: Props) {
   return (
     <div className="bg-secondary text-primary">
       {/* Hero Section */}
-      <section className="relative w-full flex items-center justify-center bg-primary">
-        <div className="w-full h-auto relative flex">
+      <section className="relative h-[70vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden bg-primary">
+        <div className="absolute inset-0 z-0">
           <Image src={data?.heroImageUrl || "/images/constructions_hero.png"} alt="Construction" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain object-center"
             priority
           />

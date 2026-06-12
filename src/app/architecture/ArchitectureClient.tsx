@@ -31,9 +31,9 @@ export default function ArchitectureClient({ data }: Props) {
   return (
     <div className="bg-secondary text-primary">
       {/* Hero Section */}
-      <section className="relative w-full flex items-center justify-center bg-primary">
-        <div className="w-full h-auto relative flex">
-          <Image src={data?.heroImageUrl || "/images/hero_architecture.png"} alt="Architecture Hero" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain object-center"
+      <section className="relative h-[70vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden bg-primary">
+        <div className="absolute inset-0 z-0">
+          <Image src={data?.heroImageUrl || "/images/hero_architecture.png"} alt="Architecture Hero" fill className="object-contain object-center"
             priority
           />
           <div className="absolute inset-0 bg-primary/40"></div>
