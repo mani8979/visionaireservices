@@ -21,17 +21,13 @@ export default function ProfileLightingClient({ data }: Props) {
     <div className="bg-secondary text-primary">
       {/* Hero Section */}
       <section className="relative h-[70vh] md:h-[85vh] w-full flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={data?.heroImageUrl || "/images/profile_lighting.png"}
-            alt="Profile Lighting Hero"
-            fill
-            className="object-cover object-center"
+        <div className="w-full h-auto relative flex">
+          <Image src={data?.heroImageUrl || "/images/profile_lighting.png"} alt="Profile Lighting Hero" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain object-center"
             priority
           />
           <div className="absolute inset-0 bg-primary/50"></div>
         </div>
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-20">
+        <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,7 +62,7 @@ export default function ProfileLightingClient({ data }: Props) {
             transition={{ duration: 1 }}
             className="relative aspect-video w-full rounded-sm overflow-hidden shadow-2xl order-2 lg:order-1"
           >
-            <Image src={data?.mainImageUrl || "/images/profile_lighting.png"} alt="Profile Lighting Details" fill className="object-cover transition-transform duration-[2s] hover:scale-105" />
+            <Image src={data?.mainImageUrl || "/images/profile_lighting.png"} alt="Profile Lighting Details" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain transition-transform duration-[2s] hover:scale-105" />
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, x: 30 }}

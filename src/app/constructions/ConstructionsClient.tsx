@@ -31,18 +31,14 @@ export default function ConstructionsClient({ data }: Props) {
   return (
     <div className="bg-secondary text-primary">
       {/* Hero Section */}
-      <section className="relative h-[70vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={data?.heroImageUrl || "/images/constructions_hero.png"}
-            alt="Construction"
-            fill
-            className="object-cover object-center"
+      <section className="relative w-full flex items-center justify-center bg-primary">
+        <div className="w-full h-auto relative flex">
+          <Image src={data?.heroImageUrl || "/images/constructions_hero.png"} alt="Construction" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain object-center"
             priority
           />
           <div className="absolute inset-0 bg-primary/60"></div>
         </div>
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-20">
+        <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,9 +79,9 @@ export default function ConstructionsClient({ data }: Props) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:w-1/2 relative aspect-square md:aspect-[4/3] w-full"
+              className="lg:w-1/2 w-full h-fit relative rounded-sm overflow-hidden"
             >
-              <Image src={data?.residentialImageUrl || "/images/residential_const.png"} alt="Residential Construction" fill className="object-cover rounded-sm shadow-2xl" />
+              <Image src={data?.residentialImageUrl || "/images/residential_const.png"} alt="Residential Construction" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain rounded-sm shadow-2xl" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
@@ -119,9 +115,9 @@ export default function ConstructionsClient({ data }: Props) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:w-1/2 relative aspect-square md:aspect-[4/3] w-full"
+              className="lg:w-1/2 w-full h-fit relative rounded-sm overflow-hidden"
             >
-              <Image src={data?.commercialImageUrl || "/images/hero_architecture.png"} alt="Commercial Construction" fill className="object-cover rounded-sm shadow-2xl" />
+              <Image src={data?.commercialImageUrl || "/images/hero_architecture.png"} alt="Commercial Construction" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain rounded-sm shadow-2xl" />
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
@@ -161,12 +157,12 @@ export default function ConstructionsClient({ data }: Props) {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1 }} className="relative aspect-[4/3] group overflow-hidden rounded-sm shadow-lg">
-             <Image src={data?.beforeImageUrl || "/images/constructions_hero.png"} alt="Before Construction" fill className="object-cover transition-transform duration-[2s] group-hover:scale-105" />
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1 }} className="relative w-full h-fit group overflow-hidden rounded-sm shadow-lg">
+             <Image src={data?.beforeImageUrl || "/images/constructions_hero.png"} alt="Before Construction" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain transition-transform duration-[2s] group-hover:scale-105" />
              <div className="absolute top-6 left-6 bg-primary/90 text-secondary px-6 py-3 text-xs font-semibold tracking-[0.2em] uppercase backdrop-blur-sm">Site Execution</div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.2 }} className="relative aspect-[4/3] group overflow-hidden rounded-sm shadow-lg">
-             <Image src={data?.afterImageUrl || "/images/hero_architecture.png"} alt="After Construction" fill className="object-cover transition-transform duration-[2s] group-hover:scale-105" />
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.2 }} className="relative w-full h-fit group overflow-hidden rounded-sm shadow-lg">
+             <Image src={data?.afterImageUrl || "/images/hero_architecture.png"} alt="After Construction" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain transition-transform duration-[2s] group-hover:scale-105" />
              <div className="absolute top-6 right-6 bg-accent/90 text-secondary px-6 py-3 text-xs font-semibold tracking-[0.2em] uppercase backdrop-blur-sm">Final Delivery</div>
           </motion.div>
         </div>
