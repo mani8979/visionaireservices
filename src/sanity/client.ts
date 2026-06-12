@@ -12,7 +12,5 @@ export const client = createClient({
     enabled: false,
   },
   // Ensure fresh data is always fetched
-  fetch: async (url, init) => {
-    return fetch(url, { ...init, cache: 'no-store' })
-  }
+  fetch: { cache: 'no-store' }
 })
