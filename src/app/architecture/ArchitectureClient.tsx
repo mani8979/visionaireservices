@@ -6,8 +6,8 @@ import Image from "next/image";
 interface ArchitectureData {
   heroTitle: string;
   heroImageUrl: string;
-  awardsWon: string;
-  designsDelivered: string;
+  yearsExperience: string;
+  projectsCompleted: string;
   clientSatisfaction: string;
   residentialTitle: string;
   residentialText: string;
@@ -45,7 +45,7 @@ export default function ArchitectureClient({ data }: Props) {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-4xl md:text-6xl lg:text-7xl font-serif text-secondary tracking-tight mb-6 leading-tight whitespace-pre-wrap"
           >
-            {data?.heroTitle || "Visionary Architecture.\\nTimeless Design."}
+            {data?.heroTitle || "Visionary Architecture.\nTimeless Design."}
           </motion.h1>
         </div>
       </section>
@@ -54,11 +54,11 @@ export default function ArchitectureClient({ data }: Props) {
       <section className="py-24 px-6 lg:px-12 max-w-7xl mx-auto border-b border-primary/10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:divide-x divide-primary/20">
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">{data?.awardsWon || "12+"}</h3>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">{data?.yearsExperience || "12+"}</h3>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] font-semibold text-primary/60">Years Experience</p>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">{data?.designsDelivered || "75+"}</h3>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">{data?.projectsCompleted || "75+"}</h3>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] font-semibold text-primary/60">Projects Completed</p>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }}>

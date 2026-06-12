@@ -16,13 +16,13 @@ export default defineType({
       type: 'cloudinary.asset',
     }),
     defineField({
-      name: 'awardsWon',
-      title: 'Awards Won',
+      name: 'yearsExperience',
+      title: 'Years Experience',
       type: 'string',
     }),
     defineField({
-      name: 'designsDelivered',
-      title: 'Designs Delivered',
+      name: 'projectsCompleted',
+      title: 'Projects Completed',
       type: 'string',
     }),
     defineField({

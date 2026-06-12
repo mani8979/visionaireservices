@@ -7,8 +7,8 @@ export default async function ArchitecturePage() {
   const data = await client.fetch(`*[_type == "architecturePage"][0] {
     heroTitle,
     "heroImageUrl": heroImage.secure_url,
-    awardsWon,
-    designsDelivered,
+    yearsExperience,
+    projectsCompleted,
     clientSatisfaction,
     residentialTitle,
     residentialText,
