@@ -27,9 +27,9 @@ export default function Footer() {
           <ul className="space-y-4 text-sm font-light tracking-wide text-secondary/70">
             <li><Link href="/constructions" className="hover:text-secondary transition-colors">Constructions</Link></li>
             <li><Link href="/interiors" className="hover:text-secondary transition-colors">Interiors</Link></li>
-            <li><Link href="/finishing-details" className="hover:text-secondary transition-colors">False Ceiling</Link></li>
-            <li><Link href="/finishing-details" className="hover:text-secondary transition-colors">Profile Lighting</Link></li>
-            <li><Link href="/finishing-details" className="hover:text-secondary transition-colors">Putty Painting</Link></li>
+            <li><Link href="/false-ceiling" className="hover:text-secondary transition-colors">False Ceiling</Link></li>
+            <li><Link href="/profile-lighting" className="hover:text-secondary transition-colors">Profile Lighting</Link></li>
+            <li><Link href="/putty-painting" className="hover:text-secondary transition-colors">Putty Painting</Link></li>
           </ul>
         </div>
 

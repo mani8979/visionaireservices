@@ -8,4 +8,11 @@ export const client = createClient({
   apiVersion,
   useCdn,
   perspective: 'published',
+  stega: {
+    enabled: false,
+  },
+  // Ensure fresh data is always fetched
+  fetch: async (url, init) => {
+    return fetch(url, { ...init, cache: 'no-store' })
+  }
 })

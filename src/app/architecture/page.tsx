@@ -1,4 +1,4 @@
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 import { client } from "@/sanity/client";
 import ArchitectureClient from "./ArchitectureClient";
