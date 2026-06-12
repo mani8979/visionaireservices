@@ -46,7 +46,7 @@ export default function Services({ data }: ServicesProps) {
           </Link>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 items-start">
           {displayServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -54,14 +54,15 @@ export default function Services({ data }: ServicesProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`group relative overflow-hidden bg-secondary/5 aspect-[4/5] rounded-sm ${index === 0 || index === 3 ? "md:col-span-2 lg:col-span-2 aspect-[4/3] lg:aspect-[2/1]" : ""}`}
+              className={`group relative overflow-hidden bg-secondary/5 rounded-sm h-fit ${index === 0 || index === 3 ? "md:col-span-2 lg:col-span-2" : ""}`}
             >
-              <Link href={service.link || "#"} className="block w-full h-full">
+              <Link href={service.link || "#"} className="block w-full">
                 <Image
                   src={service.imageUrl || "/images/placeholder.png"}
                   alt={service.title}
-                  fill
-                  className="object-cover object-center transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                 
