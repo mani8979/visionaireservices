@@ -4,7 +4,9 @@ import homePage from './homePage'
 import constructionsPage from './constructionsPage'
 import architecturePage from './architecturePage'
 import interiorsPage from './interiorsPage'
-import finishingDetailsPage from './finishingDetailsPage'
+import falseCeilingPage from './falseCeilingPage'
+import profileLightingPage from './profileLightingPage'
+import puttyPaintingPage from './puttyPaintingPage'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -13,6 +15,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     constructionsPage, 
     architecturePage, 
     interiorsPage, 
-    finishingDetailsPage
+    falseCeilingPage,
+    profileLightingPage,
+    puttyPaintingPage
   ],
 }

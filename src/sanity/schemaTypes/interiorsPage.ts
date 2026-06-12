@@ -14,7 +14,6 @@ export default defineType({
       name: 'heroImage',
       title: 'Hero Image',
       type: 'cloudinary.asset',
-      
     }),
     defineField({
       name: 'introText',
@@ -35,7 +34,6 @@ export default defineType({
       name: 'livingImage',
       title: 'Living Spaces Image',
       type: 'cloudinary.asset',
-      
     }),
     defineField({
       name: 'kitchenTitle',
@@ -51,7 +49,6 @@ export default defineType({
       name: 'kitchenImage',
       title: 'Kitchen Image',
       type: 'cloudinary.asset',
-      
     }),
     defineField({
       name: 'bedroomTitle',
@@ -67,7 +64,41 @@ export default defineType({
       name: 'bedroomImage',
       title: 'Bedroom Image',
       type: 'cloudinary.asset',
-      
+    }),
+    defineField({
+      name: 'testimonialsTitle',
+      title: 'Testimonials Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'testimonial1Text',
+      title: 'Testimonial 1 Text',
+      type: 'text',
+    }),
+    defineField({
+      name: 'testimonial1Author',
+      title: 'Testimonial 1 Author',
+      type: 'string',
+    }),
+    defineField({
+      name: 'testimonial1Role',
+      title: 'Testimonial 1 Role',
+      type: 'string',
+    }),
+    defineField({
+      name: 'testimonial2Text',
+      title: 'Testimonial 2 Text',
+      type: 'text',
+    }),
+    defineField({
+      name: 'testimonial2Author',
+      title: 'Testimonial 2 Author',
+      type: 'string',
+    }),
+    defineField({
+      name: 'testimonial2Role',
+      title: 'Testimonial 2 Role',
+      type: 'string',
     }),
   ],
 })

@@ -23,10 +23,12 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Architecture", href: "/architecture" },
+    { name: "Architectures", href: "/architecture" },
     { name: "Constructions", href: "/constructions" },
     { name: "Interiors", href: "/interiors" },
-    { name: "Finishing Details", href: "/finishing-details" },
+    { name: "False Ceiling", href: "/false-ceiling" },
+    { name: "Profile Lighting", href: "/profile-lighting" },
+    { name: "Putty Painting", href: "/putty-painting" },
     { name: "Contact", href: "#contact" },
   ];
 

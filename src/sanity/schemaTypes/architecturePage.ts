@@ -14,56 +14,83 @@ export default defineType({
       name: 'heroImage',
       title: 'Hero Image',
       type: 'cloudinary.asset',
-      
     }),
     defineField({
-      name: 'introText',
-      title: 'Intro Text',
-      type: 'text',
-    }),
-    defineField({
-      name: 'conceptualTitle',
-      title: 'Conceptual Design Title',
+      name: 'awardsWon',
+      title: 'Awards Won',
       type: 'string',
     }),
     defineField({
-      name: 'conceptualText',
-      title: 'Conceptual Design Text',
+      name: 'designsDelivered',
+      title: 'Designs Delivered',
+      type: 'string',
+    }),
+    defineField({
+      name: 'clientSatisfaction',
+      title: 'Client Satisfaction',
+      type: 'string',
+    }),
+    defineField({
+      name: 'residentialTitle',
+      title: 'Residential Architecture Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'residentialText',
+      title: 'Residential Architecture Text',
       type: 'text',
     }),
     defineField({
-      name: 'conceptualPoints',
-      title: 'Conceptual Design Points',
+      name: 'residentialPoints',
+      title: 'Residential Architecture Points',
       type: 'array',
       of: [{ type: 'string' }],
     }),
     defineField({
-      name: 'conceptualImage',
-      title: 'Conceptual Design Image',
+      name: 'residentialImage',
+      title: 'Residential Architecture Image',
       type: 'cloudinary.asset',
-      
     }),
     defineField({
-      name: 'masterTitle',
-      title: 'Master Planning Title',
+      name: 'commercialTitle',
+      title: 'Commercial Architecture Title',
       type: 'string',
     }),
     defineField({
-      name: 'masterText',
-      title: 'Master Planning Text',
+      name: 'commercialText',
+      title: 'Commercial Architecture Text',
       type: 'text',
     }),
     defineField({
-      name: 'masterPoints',
-      title: 'Master Planning Points',
+      name: 'commercialPoints',
+      title: 'Commercial Architecture Points',
       type: 'array',
       of: [{ type: 'string' }],
     }),
     defineField({
-      name: 'masterImage',
-      title: 'Master Planning Image',
+      name: 'commercialImage',
+      title: 'Commercial Architecture Image',
       type: 'cloudinary.asset',
-      
+    }),
+    defineField({
+      name: 'transformationsTitle',
+      title: 'Transformations Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'transformationsText',
+      title: 'Transformations Text',
+      type: 'text',
+    }),
+    defineField({
+      name: 'beforeImage',
+      title: 'Before Image (Blueprint)',
+      type: 'cloudinary.asset',
+    }),
+    defineField({
+      name: 'afterImage',
+      title: 'After Image (Finished Structure)',
+      type: 'cloudinary.asset',
     }),
   ],
 })
