@@ -22,9 +22,9 @@ export default function ContactCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <Link href="#contact" className="inline-block px-12 py-5 bg-primary text-secondary text-sm font-semibold tracking-[0.25em] uppercase hover:bg-accent transition-colors duration-500 rounded-sm shadow-md hover:shadow-lg">
+          <a href="https://wa.me/919502656037" target="_blank" rel="noopener noreferrer" className="inline-block px-12 py-5 bg-primary text-secondary text-sm font-semibold tracking-[0.25em] uppercase hover:bg-accent transition-colors duration-500 rounded-sm shadow-md hover:shadow-lg">
             Start Your Project
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>
