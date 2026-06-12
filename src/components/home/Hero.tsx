@@ -4,14 +4,22 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Hero() {
+interface HeroProps {
+  data: {
+    heroTitle: string;
+    heroSubtitle: string;
+    heroImageUrl: string;
+  };
+}
+
+export default function Hero({ data }: HeroProps) {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero_architecture.png"
-          alt="Modern Architecture"
+          src={data?.heroImageUrl || "/images/hero_architecture.png"}
+          alt={data?.heroTitle || "Modern Architecture"}
           fill
           className="object-cover object-center"
           priority
@@ -25,27 +33,27 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-secondary tracking-tight mb-6 uppercase"
+          className="text-5xl md:text-7xl lg:text-8xl font-serif text-secondary tracking-tight mb-6 uppercase whitespace-pre-wrap"
         >
-          INFINITY<br/>THOUGHTS
+          {data?.heroTitle || "INFINITY\\nTHOUGHTS"}
         </motion.h1>
         
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          className="text-xs md:text-sm text-secondary/90 font-medium tracking-[0.25em] uppercase mb-8"
+          className="text-xs md:text-sm text-secondary/90 font-medium tracking-[0.25em] uppercase mb-8 whitespace-pre-wrap"
         >
-          END TO END SERVICES
+          {data?.heroSubtitle?.split('\\n\\n')[0] || "END TO END SERVICES"}
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="text-sm md:text-lg text-secondary/80 font-light mb-12 max-w-2xl mx-auto"
+          className="text-sm md:text-lg text-secondary/80 font-light mb-12 max-w-2xl mx-auto whitespace-pre-wrap"
         >
-          Do you want to beautify your home like a rainbow? Contact Visionaire Engineering & Interiors now.
+          {data?.heroSubtitle?.split('\\n\\n')[1] || "Do you want to beautify your home like a rainbow? Contact Visionaire Engineering & Interiors now."}
         </motion.p>
 
         <motion.div

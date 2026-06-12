@@ -5,23 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const services = [
-  { id: "01", title: "Civil Works", image: "/images/constructions_hero.png", link: "/constructions" },
-  { id: "02", title: "Wardrobes", image: "/images/bedroom_interior.png", link: "/interiors" },
-  { id: "03", title: "Electrical", image: "/images/profile_lighting.png", link: "/finishing-details" },
-  { id: "04", title: "PVC Doors", image: "/images/residential_const.png", link: "/constructions" },
-  { id: "05", title: "Plumbing", image: "/images/kitchen_interior.png", link: "/constructions" },
-  { id: "06", title: "UPVC Windows", image: "/images/hero_architecture.png", link: "/constructions" },
-  { id: "07", title: "False Ceiling", image: "/images/finishing_hero.png", link: "/finishing-details" },
-  { id: "08", title: "CC Camera Installation", image: "/images/profile_lighting.png", link: "/finishing-details" },
-  { id: "09", title: "Putty Painting", image: "/images/putty_painting.png", link: "/finishing-details" },
-  { id: "10", title: "Glass Works", image: "/images/interiors_hero.png", link: "/interiors" },
-  { id: "11", title: "Profile Lighting", image: "/images/profile_lighting.png", link: "/finishing-details" },
-  { id: "12", title: "Wall Decors", image: "/images/putty_painting.png", link: "/interiors" },
-  { id: "13", title: "All Interiors Also", image: "/images/interiors_hero.png", link: "/interiors" },
-];
+interface Service {
+  id: string;
+  title: string;
+  imageUrl: string;
+  link: string;
+}
 
-export default function Services() {
+interface ServicesProps {
+  services: Service[];
+}
+
+export default function Services({ services }: ServicesProps) {
+  // Fallback to empty array if no services passed
+  const displayServices = services?.length > 0 ? services : [];
+
   return (
     <section className="py-32 px-6 lg:px-12 bg-primary text-secondary">
       <div className="max-w-7xl mx-auto">
@@ -45,7 +43,7 @@ export default function Services() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
-          {services.map((service, index) => (
+          {displayServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 30 }}
@@ -54,9 +52,9 @@ export default function Services() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className={`group relative overflow-hidden bg-secondary/5 aspect-[4/5] rounded-sm ${index === 0 || index === 3 ? "md:col-span-2 lg:col-span-2 aspect-[4/3] lg:aspect-[2/1]" : ""}`}
             >
-              <Link href={service.link} className="block w-full h-full">
+              <Link href={service.link || "#"} className="block w-full h-full">
                 <Image
-                  src={service.image}
+                  src={service.imageUrl || "/images/placeholder.png"}
                   alt={service.title}
                   fill
                   className="object-cover object-center transition-transform duration-[1.5s] ease-out group-hover:scale-105"

@@ -2,46 +2,74 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-const projects = [
-  { id: 1, src: "/images/residential_const.png", aspect: "aspect-[3/4]" },
-  { id: 2, src: "/images/kitchen_interior.png", aspect: "aspect-[4/3]" },
-  { id: 3, src: "/images/interiors_hero.png", aspect: "aspect-square" },
-  { id: 4, src: "/images/bedroom_interior.png", aspect: "aspect-[3/4]" },
-  { id: 5, src: "/images/hero_architecture.png", aspect: "aspect-[16/9]" },
-];
+interface Project {
+  title: string;
+  category: string;
+  imageUrl: string;
+  link: string;
+}
 
-export default function Showcase() {
+interface ShowcaseProps {
+  projects: Project[];
+}
+
+export default function Showcase({ projects }: ShowcaseProps) {
+  const displayProjects = projects?.length > 0 ? projects : [];
+
   return (
-    <section className="py-32 px-6 lg:px-12 bg-primary text-secondary">
+    <section className="py-32 px-6 lg:px-12 bg-secondary text-primary">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-20 text-center"
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 text-secondary">Featured Works</h2>
+          <div>
+            <h2 className="text-4xl md:text-5xl font-serif mb-4">Featured Work</h2>
+            <p className="text-primary/70 font-light tracking-wide">A curated selection of our finest projects.</p>
+          </div>
+          <Link href="/constructions" className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] uppercase hover:text-accent transition-colors group pb-2">
+            View All Projects
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
+          </Link>
         </motion.div>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          {displayProjects.map((project, index) => (
             <motion.div
-              key={project.id}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`relative w-full overflow-hidden rounded-sm group break-inside-avoid ${project.aspect}`}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className={`group relative overflow-hidden bg-secondary/5 rounded-sm ${index % 2 !== 0 ? 'md:mt-24' : ''}`}
             >
-              <Image
-                src={project.src}
-                alt="Project Showcase"
-                fill
-                className="object-cover transition-transform duration-[2s] group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Link href={project.link || "#"} className="block w-full">
+                <div className="relative aspect-[4/5] w-full overflow-hidden">
+                  <Image
+                    src={project.imageUrl || "/images/placeholder.png"}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-center transition-transform duration-[2s] ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500" />
+                </div>
+                
+                <div className="pt-8 pb-4 flex justify-between items-start">
+                  <div>
+                    <h3 className="text-2xl font-serif mb-2 group-hover:text-accent transition-colors">{project.title}</h3>
+                    <p className="text-xs tracking-[0.2em] uppercase text-primary/60">{project.category}</p>
+                  </div>
+                  <div className="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:text-secondary transition-all duration-300">
+                    <ArrowRight className="w-4 h-4 transform -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                  </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -2,15 +2,20 @@
 
 import { motion } from "framer-motion";
 
-const steps = [
-  { num: "01", title: "Consultation", desc: "Understanding your vision, requirements, and project scope." },
-  { num: "02", title: "Planning", desc: "Developing comprehensive architectural and execution strategies." },
-  { num: "03", title: "Design", desc: "Crafting premium aesthetics and material selections." },
-  { num: "04", title: "Construction", desc: "Executing with precision, quality control, and expert management." },
-  { num: "05", title: "Finishing", desc: "Delivering flawless details and turning over the keys to your new space." },
-];
+interface ProcessStep {
+  num: string;
+  title: string;
+  desc: string;
+}
 
-export default function Process() {
+interface ProcessProps {
+  steps: ProcessStep[];
+}
+
+export default function Process({ steps }: ProcessProps) {
+  // Sort steps by num if necessary, but we can assume Sanity returns them in order or we sort in groq
+  const displaySteps = steps?.length > 0 ? steps : [];
+
   return (
     <section className="py-32 px-6 lg:px-12 bg-secondary text-primary overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -32,7 +37,7 @@ export default function Process() {
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-[1px] bg-primary/20 -translate-y-1/2 z-0" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-6 relative z-10">
-            {steps.map((step, index) => (
+            {displaySteps.map((step, index) => (
               <motion.div
                 key={step.num}
                 initial={{ opacity: 0, y: 30 }}
@@ -45,7 +50,7 @@ export default function Process() {
                   <span className="font-serif text-xl md:text-2xl">{step.num}</span>
                 </div>
                 <h3 className="text-xl md:text-2xl font-serif mb-4">{step.title}</h3>
-                <p className="text-sm text-primary/60 font-light leading-relaxed px-4">
+                <p className="text-sm text-primary/60 font-light leading-relaxed px-4 whitespace-pre-wrap">
                   {step.desc}
                 </p>
               </motion.div>
