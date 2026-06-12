@@ -43,7 +43,7 @@ export default function Footer() {
         <div id="contact">
           <h4 className="font-serif text-lg mb-8 tracking-wide text-accent">Contact</h4>
           <ul className="space-y-4 text-sm font-light tracking-wide text-secondary/70">
-            <li>+1 (555) 123-4567</li>
+            <li>+91 77805 94495</li>
             <li>contact@visionaireservices.com</li>
             <li className="leading-relaxed">123 Architecture Blvd,<br/>Suite 400<br/>Design City, NY 10001</li>
           </ul>

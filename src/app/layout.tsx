@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import MobileContactBar from "@/components/layout/MobileContactBar";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,10 +30,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${playfair.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-secondary text-primary">
+      <body className="min-h-full flex flex-col font-sans bg-secondary text-primary pb-16 md:pb-0">
         <Header />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
+        <MobileContactBar />
       </body>
     </html>
   );

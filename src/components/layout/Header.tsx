@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { WhatsAppIcon } from "../icons/WhatsAppIcon";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,6 +56,27 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
+          
+          {/* Contact Icons */}
+          <div className="flex items-center gap-5 ml-2 border-l border-gray-300 pl-8">
+            <a 
+              href="tel:+917780594495" 
+              className="flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300" 
+              title="Call Us"
+            >
+              <Phone size={18} />
+              <span className="text-sm font-semibold tracking-wider">+91 77805 94495</span>
+            </a>
+            <a 
+              href="https://wa.me/917780594495" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#25D366] hover:opacity-80 transition-opacity duration-300" 
+              title="WhatsApp Us"
+            >
+              <WhatsAppIcon size={22} />
+            </a>
+          </div>
         </nav>
 
         {/* Mobile Menu Toggle */}
