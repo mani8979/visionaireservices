@@ -10,16 +10,16 @@ export default async function Home() {
   const homeData = await client.fetch(`*[_type == "homePage"][0] {
     heroTitle,
     heroSubtitle,
-    "heroImageUrl": heroImage.asset->url,
+    "heroImageUrl": heroImage.secure_url,
     aboutTitle,
     aboutText,
-    "aboutImageUrl": aboutImage.asset->url
+    "aboutImageUrl": aboutImage.secure_url
   }`);
 
   const servicesData = await client.fetch(`*[_type == "service"] | order(id asc) {
     id,
     title,
-    "imageUrl": image.asset->url,
+    "imageUrl": image.secure_url,
     link
   }`);
 
@@ -32,7 +32,7 @@ export default async function Home() {
   const projectsData = await client.fetch(`*[_type == "project"] {
     title,
     category,
-    "imageUrl": image.asset->url,
+    "imageUrl": image.secure_url,
     link
   }`);
 

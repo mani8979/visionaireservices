@@ -18,8 +18,8 @@ export default defineType({
     defineField({
       name: 'image',
       title: 'Service Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'link',

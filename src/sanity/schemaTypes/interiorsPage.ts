@@ -13,8 +13,8 @@ export default defineType({
     defineField({
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'introText',
@@ -34,8 +34,8 @@ export default defineType({
     defineField({
       name: 'livingImage',
       title: 'Living Spaces Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'kitchenTitle',
@@ -50,8 +50,8 @@ export default defineType({
     defineField({
       name: 'kitchenImage',
       title: 'Kitchen Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'bedroomTitle',
@@ -66,8 +66,8 @@ export default defineType({
     defineField({
       name: 'bedroomImage',
       title: 'Bedroom Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
   ],
 })

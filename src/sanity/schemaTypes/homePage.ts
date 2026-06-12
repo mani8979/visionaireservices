@@ -18,8 +18,8 @@ export default defineType({
     defineField({
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'aboutTitle',
@@ -34,8 +34,8 @@ export default defineType({
     defineField({
       name: 'aboutImage',
       title: 'About Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
   ],
 })

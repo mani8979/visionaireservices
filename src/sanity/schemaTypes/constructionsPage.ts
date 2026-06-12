@@ -13,8 +13,8 @@ export default defineType({
     defineField({
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'yearsExperience',
@@ -50,8 +50,8 @@ export default defineType({
     defineField({
       name: 'residentialImage',
       title: 'Residential Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'commercialTitle',
@@ -72,8 +72,8 @@ export default defineType({
     defineField({
       name: 'commercialImage',
       title: 'Commercial Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'transformationsTitle',
@@ -88,14 +88,14 @@ export default defineType({
     defineField({
       name: 'beforeImage',
       title: 'Before Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'afterImage',
       title: 'After Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
   ],
 })

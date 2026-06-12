@@ -13,8 +13,8 @@ export default defineType({
     defineField({
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'introText',
@@ -34,8 +34,8 @@ export default defineType({
     defineField({
       name: 'falseCeilingImage',
       title: 'False Ceiling Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'profileLightingTitle',
@@ -50,8 +50,8 @@ export default defineType({
     defineField({
       name: 'profileLightingImage',
       title: 'Profile Lighting Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'puttyPaintingTitle',
@@ -66,14 +66,14 @@ export default defineType({
     defineField({
       name: 'puttyPaintingPrepImage',
       title: 'Putty Painting Prep Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
     defineField({
       name: 'puttyPaintingFinishImage',
       title: 'Putty Painting Finish Image',
-      type: 'image',
-      options: { hotspot: true },
+      type: 'cloudinary.asset',
+      
     }),
   ],
 })
