@@ -33,15 +33,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Company */}
-        <div>
-          <h4 className="font-serif text-lg mb-8 tracking-wide text-accent">Company</h4>
-          <ul className="space-y-4 text-sm font-light tracking-wide text-secondary/70">
-            <li><Link href="/" className="hover:text-secondary transition-colors">About Us</Link></li>
-            <li><Link href="/" className="hover:text-secondary transition-colors">Our Process</Link></li>
-            <li><Link href="/" className="hover:text-secondary transition-colors">Projects</Link></li>
-          </ul>
-        </div>
+
 
         {/* Contact */}
         <div id="contact">

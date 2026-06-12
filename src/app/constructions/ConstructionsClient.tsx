@@ -31,43 +31,28 @@ export default function ConstructionsClient({ data }: Props) {
   return (
     <div className="bg-secondary text-primary">
       {/* Hero Section */}
-      <section className="relative w-full flex flex-col bg-primary pt-24 md:pt-0">
-        <div className="w-full relative flex items-center justify-center">
+      <section className="relative h-[70vh] md:h-[85vh] w-full flex items-center justify-center overflow-hidden bg-primary pt-24 md:pt-0">
+        <div className="absolute inset-0 z-0">
           <Image 
             src={data?.heroImageUrl || "/images/constructions_hero.png"} 
             alt="Hero Image" 
-            width={0} 
-            height={0} 
-            sizes="100vw" 
-            className="w-full h-auto max-h-[80vh] object-cover object-center"
-            style={{ width: '100%', height: 'auto' }}
+            fill
+            className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-primary/40 hidden md:block"></div>
+          <div className="absolute inset-0 bg-primary/40"></div>
           
           {/* Desktop Text Overlay */}
-          <div className="hidden md:flex absolute inset-0 z-10 items-center justify-center px-6 text-center">
+          <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
             <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-4xl md:text-6xl lg:text-7xl font-serif text-secondary tracking-tight mb-6 leading-tight whitespace-pre-wrap"
+            className="text-4xl md:text-6xl lg:text-7xl font-serif text-secondary tracking-tight mb-6 leading-tight whitespace-pre-wrap mt-16 md:mt-0"
           >
             {data?.heroTitle || "Precision Construction.\\nTimeless Results."}
           </motion.h1>
           </div>
-        </div>
-        
-        {/* Mobile Text Below Image */}
-        <div className="md:hidden w-full px-6 py-12 text-center bg-secondary">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-4xl md:text-6xl lg:text-7xl font-serif text-primary tracking-tight mb-6 leading-tight whitespace-pre-wrap"
-          >
-            {data?.heroTitle || "Precision Construction.\\nTimeless Results."}
-          </motion.h1>
         </div>
       </section>
 
