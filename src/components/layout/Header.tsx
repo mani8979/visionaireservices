@@ -37,7 +37,7 @@ export default function Header() {
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
         isScrolled
           ? "bg-secondary/95 backdrop-blur-md shadow-sm py-4"
-          : "bg-transparent py-6"
+          : "bg-secondary/95 md:bg-transparent py-4 md:py-6"
       }`}
     >
       <div className="max-w-[90rem] mx-auto px-4 lg:px-8 flex justify-between items-center gap-2">
@@ -74,16 +74,18 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
-          
-          {/* Contact Icons */}
-          <div className="flex items-center gap-3 xl:gap-4 ml-1 border-l border-gray-300 pl-3 xl:pl-4">
+        </nav>
+
+        {/* Contact Icons & Mobile Toggle */}
+        <div className="flex items-center gap-3 md:gap-5">
+          <div className="flex items-center gap-3 md:gap-4 lg:ml-1 lg:border-l border-gray-300 lg:pl-4">
             <a 
               href="tel:+919522298777" 
               className="flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap" 
               title="Call Us"
             >
               <Phone size={18} />
-              <span className="hidden 2xl:inline text-sm font-semibold tracking-wider whitespace-nowrap">+91 95222 98777</span>
+              <span className="hidden sm:inline text-sm font-semibold tracking-wider whitespace-nowrap">+91 95222 98777</span>
             </a>
             <a 
               href="https://wa.me/919522298777" 
@@ -95,15 +97,15 @@ export default function Header() {
               <WhatsAppIcon size={22} />
             </a>
           </div>
-        </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="lg:hidden text-primary"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="lg:hidden text-primary"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav Menu */}

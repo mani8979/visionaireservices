@@ -36,7 +36,7 @@ export default function InteriorsClient({ data }: Props) {
       {/* Hero Section */}
       <section className="relative h-[70vh] md:h-[85vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src={data?.heroImageUrl || "/images/interiors_hero.png"} alt="Luxury Interior" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain object-center"
+          <Image src={data?.heroImageUrl || "/images/interiors_hero.png"} alt="Luxury Interior" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover object-center"
             priority
           />
           <div className="absolute inset-0 bg-primary/40"></div>
@@ -89,7 +89,7 @@ export default function InteriorsClient({ data }: Props) {
             transition={{ duration: 1 }}
             className="lg:col-span-8 relative aspect-[4/5] md:aspect-[16/9] order-1 lg:order-2 w-full shadow-2xl"
           >
-            <Image src={data?.livingImageUrl || "/images/interiors_hero.png"} alt="Living Spaces" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain" />
+            <Image src={data?.livingImageUrl || "/images/interiors_hero.png"} alt="Living Spaces" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover" />
           </motion.div>
         </div>
 
@@ -102,7 +102,7 @@ export default function InteriorsClient({ data }: Props) {
             transition={{ duration: 1 }}
             className="lg:col-span-7 relative aspect-[4/5] md:aspect-[4/3] w-full shadow-2xl"
           >
-            <Image src={data?.kitchenImageUrl || "/images/kitchen_interior.png"} alt="Kitchen Design" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain" />
+            <Image src={data?.kitchenImageUrl || "/images/kitchen_interior.png"} alt="Kitchen Design" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover" />
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -139,7 +139,7 @@ export default function InteriorsClient({ data }: Props) {
             transition={{ duration: 1 }}
             className="relative aspect-[3/4] md:aspect-square w-full shadow-2xl order-1 md:order-2"
           >
-            <Image src={data?.bedroomImageUrl || "/images/bedroom_interior.png"} alt="Bedroom Design" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-contain" />
+            <Image src={data?.bedroomImageUrl || "/images/bedroom_interior.png"} alt="Bedroom Design" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover" />
           </motion.div>
         </div>
       </section>
