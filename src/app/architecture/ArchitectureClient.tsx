@@ -31,19 +31,40 @@ export default function ArchitectureClient({ data }: Props) {
   return (
     <div className="bg-secondary text-primary">
       {/* Hero Section */}
-      <section className="relative h-[70vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden bg-primary">
-        <div className="absolute inset-0 z-0">
-          <Image src={data?.heroImageUrl || "/images/hero_architecture.png"} alt="Architecture Hero" fill className="object-contain object-center"
+      <section className="relative w-full flex flex-col bg-primary pt-24 md:pt-0">
+        <div className="w-full relative flex items-center justify-center">
+          <Image 
+            src={data?.heroImageUrl || "/images/hero_architecture.png"} 
+            alt="Hero Image" 
+            width={0} 
+            height={0} 
+            sizes="100vw" 
+            className="w-full h-auto max-h-[80vh] object-contain object-center"
+            style={{ width: '100%', height: 'auto' }}
             priority
           />
-          <div className="absolute inset-0 bg-primary/40"></div>
-        </div>
-        <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
-          <motion.h1 
+          <div className="absolute inset-0 bg-primary/40 hidden md:block"></div>
+          
+          {/* Desktop Text Overlay */}
+          <div className="hidden md:flex absolute inset-0 z-10 items-center justify-center px-6 text-center">
+            <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-4xl md:text-6xl lg:text-7xl font-serif text-secondary tracking-tight mb-6 leading-tight whitespace-pre-wrap"
+          >
+            {data?.heroTitle || "Visionary Architecture.\nTimeless Design."}
+          </motion.h1>
+          </div>
+        </div>
+        
+        {/* Mobile Text Below Image */}
+        <div className="md:hidden w-full px-6 py-12 text-center bg-secondary">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-4xl md:text-6xl lg:text-7xl font-serif text-primary tracking-tight mb-6 leading-tight whitespace-pre-wrap"
           >
             {data?.heroTitle || "Visionary Architecture.\nTimeless Design."}
           </motion.h1>
