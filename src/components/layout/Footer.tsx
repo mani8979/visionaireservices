@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,12 +7,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-24">
         {/* Brand */}
         <div className="md:col-span-1">
-          <span className="font-serif text-xl md:text-2xl tracking-widest uppercase font-bold text-secondary">
-            Visionaire
-            <span className="block text-[8px] md:text-[10px] font-sans tracking-[0.2em] font-normal text-secondary/60 mt-1">
-              ENGINEERING & INTERIORS
+          <div className="flex items-center gap-3">
+            <Image src="/images/logo.jpeg" alt="Visionaire Logo" width={56} height={56} className="rounded-full object-cover shadow-sm" />
+            <span className="font-serif text-xl md:text-2xl tracking-widest uppercase font-bold text-secondary">
+              Visionaire
+              <span className="block text-[8px] md:text-[10px] font-sans tracking-[0.2em] font-normal text-secondary/60 mt-1">
+                ENGINEERING & INTERIORS
+              </span>
             </span>
-          </span>
+          </div>
           <p className="mt-8 text-sm text-secondary/70 leading-relaxed font-light">
             Our efforts for you. Our customer is always King. INFINITY THOUGHTS END TO END SERVICES.
           </p>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { WhatsAppIcon } from "../icons/WhatsAppIcon";
@@ -37,7 +38,8 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" className="flex items-center gap-3">
+          <Image src="/images/logo.jpeg" alt="Visionaire Logo" width={48} height={48} className="rounded-full object-cover shadow-sm" />
           <span className="font-serif text-xl md:text-2xl tracking-widest uppercase font-bold text-primary">
             Visionaire
             <span className="block text-[8px] md:text-[10px] font-sans tracking-[0.2em] font-normal text-supporting mt-1">
