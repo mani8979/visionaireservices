@@ -35,7 +35,7 @@ export default function Hero({ data }: HeroProps) {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-5xl md:text-7xl lg:text-8xl font-serif text-secondary tracking-tight mb-6 uppercase whitespace-pre-wrap"
         >
-          {data?.heroTitle || "INFINITY\\nTHOUGHTS"}
+          {data?.heroTitle ? data.heroTitle.replace(/\\n/g, '\n') : "INFINITY\nTHOUGHTS"}
         </motion.h1>
         
         <motion.p
@@ -44,7 +44,7 @@ export default function Hero({ data }: HeroProps) {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="text-xs md:text-sm text-secondary/90 font-medium tracking-[0.25em] uppercase mb-8 whitespace-pre-wrap"
         >
-          {data?.heroSubtitle?.split('\\n\\n')[0] || "END TO END SERVICES"}
+          {data?.heroSubtitle ? data.heroSubtitle.split('\\n\\n')[0] : "END TO END SERVICES"}
         </motion.p>
 
         <motion.p
@@ -53,7 +53,7 @@ export default function Hero({ data }: HeroProps) {
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           className="text-sm md:text-lg text-secondary/80 font-light mb-12 max-w-2xl mx-auto whitespace-pre-wrap"
         >
-          {data?.heroSubtitle?.split('\\n\\n')[1] || "Do you want to beautify your home like a rainbow? Contact Visionaire Engineering & Interiors now."}
+          {data?.heroSubtitle && data.heroSubtitle.includes('\\n\\n') ? data.heroSubtitle.split('\\n\\n')[1] : "Do you want to beautify your home like a rainbow? Contact Visionaire Engineering & Interiors now."}
         </motion.p>
 
         <motion.div
