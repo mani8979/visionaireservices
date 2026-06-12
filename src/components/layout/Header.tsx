@@ -58,7 +58,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex gap-5 xl:gap-8 items-center">
+        <nav className="hidden lg:flex gap-3 xl:gap-6 items-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -69,21 +69,21 @@ export default function Header() {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }
               }}
-              className="text-xs font-semibold uppercase tracking-[0.15em] text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap"
+              className="text-[10px] xl:text-xs font-semibold uppercase tracking-widest text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap"
             >
               {link.name}
             </Link>
           ))}
           
           {/* Contact Icons */}
-          <div className="flex items-center gap-4 xl:gap-5 ml-2 border-l border-gray-300 pl-4 xl:pl-8">
+          <div className="flex items-center gap-3 xl:gap-4 ml-1 border-l border-gray-300 pl-3 xl:pl-6">
             <a 
               href="tel:+919502656037" 
               className="flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap" 
               title="Call Us"
             >
               <Phone size={18} />
-              <span className="text-sm font-semibold tracking-wider whitespace-nowrap">+91 95026 56037</span>
+              <span className="hidden xl:inline text-sm font-semibold tracking-wider whitespace-nowrap">+91 95026 56037</span>
             </a>
             <a 
               href="https://wa.me/919502656037" 
