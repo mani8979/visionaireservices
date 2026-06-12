@@ -9,28 +9,40 @@ interface ProcessStep {
 }
 
 interface ProcessProps {
-  steps: ProcessStep[];
+  data: {
+    title: string;
+    subtitle: string;
+    steps: ProcessStep[];
+  };
 }
 
-export default function Process({ steps }: ProcessProps) {
-  // Sort steps by num if necessary, but we can assume Sanity returns them in order or we sort in groq
-  const displaySteps = steps?.length > 0 ? steps : [];
+export default function Process({ data }: ProcessProps) {
+  // Fallback
+  const displaySteps = data?.steps?.length > 0 ? data.steps : [];
 
   return (
-    <section className="py-32 px-6 lg:px-12 bg-secondary text-primary overflow-hidden">
+    <section className="py-32 px-6 lg:px-12 bg-secondary text-primary">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-24"
-        >
-          <h2 className="text-4xl md:text-5xl font-serif mb-6">The Process</h2>
-          <p className="text-primary/70 font-light tracking-wide max-w-2xl mx-auto text-lg">
-            A seamless journey from initial concept to the final premium finish.
-          </p>
-        </motion.div>
+        <div className="text-center mb-20 md:mb-32">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 whitespace-pre-wrap"
+          >
+            {data?.title || "The Process"}
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-primary/70 font-light tracking-wide max-w-2xl mx-auto text-lg whitespace-pre-wrap"
+          >
+            {data?.subtitle || "A seamless journey from initial concept to the final premium finish."}
+          </motion.p>
+        </div>
 
         <div className="relative">
           {/* Connecting Line (Desktop) */}

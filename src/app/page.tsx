@@ -15,36 +15,51 @@ export default async function Home() {
     "heroImageUrl": heroImage.secure_url,
     aboutTitle,
     aboutText,
-    "aboutImageUrl": aboutImage.secure_url
-  }`);
-
-  const servicesData = await client.fetch(`*[_type == "service"] | order(id asc) {
-    id,
-    title,
-    "imageUrl": image.secure_url,
-    link
-  }`);
-
-  const processData = await client.fetch(`*[_type == "processStep"] | order(num asc) {
-    num,
-    title,
-    desc
-  }`);
-
-  const projectsData = await client.fetch(`*[_type == "project"] {
-    title,
-    category,
-    "imageUrl": image.secure_url,
-    link
+    "aboutImageUrl": aboutImage.secure_url,
+    expertiseTitle,
+    expertiseSubtitle,
+    services[] {
+      id,
+      title,
+      "imageUrl": image.secure_url,
+      link
+    },
+    processTitle,
+    processSubtitle,
+    processSteps[] {
+      num,
+      title,
+      desc
+    },
+    featuredWorkTitle,
+    featuredWorkSubtitle,
+    featuredProjects[] {
+      title,
+      category,
+      "imageUrl": image.secure_url,
+      link
+    }
   }`);
 
   return (
     <>
       <Hero data={homeData} />
       <About data={homeData} />
-      <Services services={servicesData} />
-      <Process steps={processData} />
-      <Showcase projects={projectsData} />
+      <Services data={{
+        title: homeData.expertiseTitle,
+        subtitle: homeData.expertiseSubtitle,
+        services: homeData.services
+      }} />
+      <Process data={{
+        title: homeData.processTitle,
+        subtitle: homeData.processSubtitle,
+        steps: homeData.processSteps
+      }} />
+      <Showcase data={{
+        title: homeData.featuredWorkTitle,
+        subtitle: homeData.featuredWorkSubtitle,
+        projects: homeData.featuredProjects
+      }} />
       <ContactCTA />
     </>
   );

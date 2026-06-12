@@ -13,12 +13,16 @@ interface Service {
 }
 
 interface ServicesProps {
-  services: Service[];
+  data: {
+    title: string;
+    subtitle: string;
+    services: Service[];
+  };
 }
 
-export default function Services({ services }: ServicesProps) {
+export default function Services({ data }: ServicesProps) {
   // Fallback to empty array if no services passed
-  const displayServices = services?.length > 0 ? services : [];
+  const displayServices = data?.services?.length > 0 ? data.services : [];
 
   return (
     <section className="py-32 px-6 lg:px-12 bg-primary text-secondary">
@@ -31,9 +35,9 @@ export default function Services({ services }: ServicesProps) {
           className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-secondary/20 pb-12"
         >
           <div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 text-secondary">Expertise</h2>
-            <p className="text-secondary/70 font-light tracking-wide max-w-xl text-lg">
-              Elevating spaces through expert craftsmanship and innovative design solutions tailored to your unique lifestyle.
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 text-secondary whitespace-pre-wrap">{data?.title || "Expertise"}</h2>
+            <p className="text-secondary/70 font-light tracking-wide max-w-xl text-lg whitespace-pre-wrap">
+              {data?.subtitle || "Elevating spaces through expert craftsmanship and innovative design solutions tailored to your unique lifestyle."}
             </p>
           </div>
           <Link href="/constructions" className="flex items-center gap-3 text-accent text-xs font-semibold tracking-[0.2em] uppercase hover:text-secondary transition-colors group">

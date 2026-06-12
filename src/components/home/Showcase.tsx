@@ -13,31 +13,37 @@ interface Project {
 }
 
 interface ShowcaseProps {
-  projects: Project[];
+  data: {
+    title: string;
+    subtitle: string;
+    projects: Project[];
+  };
 }
 
-export default function Showcase({ projects }: ShowcaseProps) {
-  const displayProjects = projects?.length > 0 ? projects : [];
+export default function Showcase({ data }: ShowcaseProps) {
+  // Fallback
+  const displayProjects = data?.projects?.length > 0 ? data.projects : [];
 
   return (
-    <section className="py-32 px-6 lg:px-12 bg-secondary text-primary">
+    <section className="py-32 px-6 lg:px-12 bg-primary text-secondary overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20"
-        >
-          <div>
-            <h2 className="text-4xl md:text-5xl font-serif mb-4">Featured Work</h2>
-            <p className="text-primary/70 font-light tracking-wide">A curated selection of our finest projects.</p>
-          </div>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20 md:mb-32">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 whitespace-pre-wrap">{data?.title || "Featured Work"}</h2>
+            <p className="text-secondary/70 font-light tracking-wide max-w-xl text-lg whitespace-pre-wrap">
+              {data?.subtitle || "A curated selection of our finest projects."}
+            </p>
+          </motion.div>
           <Link href="/constructions" className="flex items-center gap-3 text-xs font-semibold tracking-[0.2em] uppercase hover:text-accent transition-colors group pb-2">
             View All Projects
             <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
           </Link>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {displayProjects.map((project, index) => (

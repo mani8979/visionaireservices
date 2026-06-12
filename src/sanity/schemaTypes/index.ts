@@ -5,9 +5,6 @@ import constructionsPage from './constructionsPage'
 import architecturePage from './architecturePage'
 import interiorsPage from './interiorsPage'
 import finishingDetailsPage from './finishingDetailsPage'
-import service from './service'
-import project from './project'
-import processStep from './processStep'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -16,9 +13,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     constructionsPage, 
     architecturePage, 
     interiorsPage, 
-    finishingDetailsPage, 
-    service, 
-    project, 
-    processStep
+    finishingDetailsPage
   ],
 }
