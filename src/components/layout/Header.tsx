@@ -78,15 +78,15 @@ export default function Header() {
           {/* Contact Icons */}
           <div className="flex items-center gap-3 xl:gap-4 ml-1 border-l border-gray-300 pl-3 xl:pl-4">
             <a 
-              href="tel:+919502656037" 
+              href="tel:+919522298777" 
               className="flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap" 
               title="Call Us"
             >
               <Phone size={18} />
-              <span className="hidden 2xl:inline text-sm font-semibold tracking-wider whitespace-nowrap">+91 95026 56037</span>
+              <span className="hidden 2xl:inline text-sm font-semibold tracking-wider whitespace-nowrap">+91 95222 98777</span>
             </a>
             <a 
-              href="https://wa.me/919502656037" 
+              href="https://wa.me/919522298777" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-[#25D366] hover:opacity-80 transition-opacity duration-300 flex-shrink-0" 

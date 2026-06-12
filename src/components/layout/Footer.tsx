@@ -47,7 +47,7 @@ export default function Footer() {
         <div id="contact">
           <h4 className="font-serif text-lg mb-8 tracking-wide text-accent">Contact</h4>
           <ul className="space-y-4 text-sm font-light tracking-wide text-secondary/70">
-            <li>+91 9502656037</li>
+            <li>+91 95222 98777</li>
             <li>www.visionaireservices.com</li>
             <li>connect@visionaireservices.com</li>
             <li className="leading-relaxed">Plot No: 960, Beside Aditya Fortuner Near Kushi Shop,<br/>Midhilapuri Vuda Colony,<br/>Madhurawada, Visakhapatnam - 530041</li>
