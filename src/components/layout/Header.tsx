@@ -20,7 +20,6 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
     { name: "Architecture", href: "/architecture" },
     { name: "Constructions", href: "/constructions" },
     { name: "Interiors", href: "/interiors" },
@@ -36,11 +35,11 @@ export default function Header() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+      <div className="max-w-[90rem] mx-auto px-6 lg:px-12 flex justify-between items-center gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 flex-shrink-0">
           <Image src="/images/logo.jpeg" alt="Visionaire Logo" width={48} height={48} className="rounded-full object-cover shadow-sm" />
-          <span className="font-serif text-xl md:text-2xl tracking-widest uppercase font-bold text-primary">
+          <span className="font-serif text-xl md:text-2xl tracking-widest uppercase font-bold text-primary whitespace-nowrap">
             Visionaire
             <span className="block text-[8px] md:text-[10px] font-sans tracking-[0.2em] font-normal text-supporting mt-1">
               ENGINEERING & INTERIORS
