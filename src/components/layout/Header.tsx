@@ -20,6 +20,7 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    { name: "Architecture", href: "/architecture" },
     { name: "Constructions", href: "/constructions" },
     { name: "Interiors", href: "/interiors" },
     { name: "Finishing Details", href: "/finishing-details" },
@@ -37,10 +38,10 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <span className="font-serif text-2xl tracking-widest uppercase font-bold text-primary">
+          <span className="font-serif text-xl md:text-2xl tracking-widest uppercase font-bold text-primary">
             Visionaire
-            <span className="block text-[10px] font-sans tracking-[0.3em] font-normal text-supporting mt-1">
-              SERVICES
+            <span className="block text-[8px] md:text-[10px] font-sans tracking-[0.2em] font-normal text-supporting mt-1">
+              ENGINEERING & INTERIORS
             </span>
           </span>
         </Link>
@@ -60,15 +61,15 @@ export default function Header() {
           {/* Contact Icons */}
           <div className="flex items-center gap-5 ml-2 border-l border-gray-300 pl-8">
             <a 
-              href="tel:+917780594495" 
+              href="tel:+919502656037" 
               className="flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300" 
               title="Call Us"
             >
               <Phone size={18} />
-              <span className="text-sm font-semibold tracking-wider">+91 77805 94495</span>
+              <span className="text-sm font-semibold tracking-wider">+91 95026 56037</span>
             </a>
             <a 
-              href="https://wa.me/917780594495" 
+              href="https://wa.me/919502656037" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-[#25D366] hover:opacity-80 transition-opacity duration-300" 

@@ -32,20 +32,16 @@ export default function ConstructionsPage() {
 
       {/* Intro Stats */}
       <section className="py-24 px-6 lg:px-12 max-w-7xl mx-auto border-b border-primary/10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:divide-x divide-primary/20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:divide-x divide-primary/20">
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">15+</h3>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">12+</h3>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] font-semibold text-primary/60">Years Experience</p>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">250+</h3>
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">75+</h3>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] font-semibold text-primary/60">Projects Completed</p>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.4 }}>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">50+</h3>
-            <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] font-semibold text-primary/60">Awards Won</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.6 }}>
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-accent mb-4">100%</h3>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] font-semibold text-primary/60">Client Satisfaction</p>
           </motion.div>

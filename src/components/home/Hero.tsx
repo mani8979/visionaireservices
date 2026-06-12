@@ -25,18 +25,27 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-secondary tracking-tight mb-6"
+          className="text-5xl md:text-7xl lg:text-8xl font-serif text-secondary tracking-tight mb-6 uppercase"
         >
-          Building Spaces<br/>That Inspire
+          INFINITY<br/>THOUGHTS
         </motion.h1>
         
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          className="text-xs md:text-sm text-secondary/90 font-medium tracking-[0.25em] uppercase mb-12"
+          className="text-xs md:text-sm text-secondary/90 font-medium tracking-[0.25em] uppercase mb-8"
         >
-          Architecture • Construction • Interiors • Premium Finishes
+          END TO END SERVICES
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          className="text-sm md:text-lg text-secondary/80 font-light mb-12 max-w-2xl mx-auto"
+        >
+          Do you want to beautify your home like a rainbow? Contact Visionaire Engineering & Interiors now.
         </motion.p>
 
         <motion.div

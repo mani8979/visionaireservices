@@ -6,36 +6,19 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const services = [
-  {
-    id: "01",
-    title: "Constructions",
-    image: "/images/constructions_hero.png",
-    link: "/constructions",
-  },
-  {
-    id: "02",
-    title: "Interiors",
-    image: "/images/interiors_hero.png",
-    link: "/interiors",
-  },
-  {
-    id: "03",
-    title: "False Ceiling",
-    image: "/images/finishing_hero.png",
-    link: "/finishing-details",
-  },
-  {
-    id: "04",
-    title: "Profile Lighting",
-    image: "/images/profile_lighting.png",
-    link: "/finishing-details",
-  },
-  {
-    id: "05",
-    title: "Putty Painting",
-    image: "/images/putty_painting.png",
-    link: "/finishing-details",
-  },
+  { id: "01", title: "Civil Works", image: "/images/constructions_hero.png", link: "/constructions" },
+  { id: "02", title: "Wardrobes", image: "/images/bedroom_interior.png", link: "/interiors" },
+  { id: "03", title: "Electrical", image: "/images/profile_lighting.png", link: "/finishing-details" },
+  { id: "04", title: "PVC Doors", image: "/images/residential_const.png", link: "/constructions" },
+  { id: "05", title: "Plumbing", image: "/images/kitchen_interior.png", link: "/constructions" },
+  { id: "06", title: "UPVC Windows", image: "/images/hero_architecture.png", link: "/constructions" },
+  { id: "07", title: "False Ceiling", image: "/images/finishing_hero.png", link: "/finishing-details" },
+  { id: "08", title: "CC Camera Installation", image: "/images/profile_lighting.png", link: "/finishing-details" },
+  { id: "09", title: "Putty Painting", image: "/images/putty_painting.png", link: "/finishing-details" },
+  { id: "10", title: "Glass Works", image: "/images/interiors_hero.png", link: "/interiors" },
+  { id: "11", title: "Profile Lighting", image: "/images/profile_lighting.png", link: "/finishing-details" },
+  { id: "12", title: "Wall Decors", image: "/images/putty_painting.png", link: "/interiors" },
+  { id: "13", title: "All Interiors Also", image: "/images/interiors_hero.png", link: "/interiors" },
 ];
 
 export default function Services() {
