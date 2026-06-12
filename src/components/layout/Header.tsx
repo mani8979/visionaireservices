@@ -40,25 +40,25 @@ export default function Header() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-[90rem] mx-auto px-6 lg:px-12 flex justify-between items-center gap-4">
+      <div className="max-w-[90rem] mx-auto px-4 lg:px-8 flex justify-between items-center gap-2">
         {/* Logo */}
         <Link href="/" onClick={(e) => {
           if (pathname === "/") {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }
-        }} className="flex items-center gap-3 flex-shrink-0">
-          <Image src="/images/logo.jpeg" alt="Visionaire Logo" width={48} height={48} className="rounded-full object-cover shadow-sm" />
-          <span className="font-serif text-xl md:text-2xl tracking-widest uppercase font-bold text-primary whitespace-nowrap">
+        }} className="flex items-center gap-2 xl:gap-3 flex-shrink-0">
+          <Image src="/images/logo.jpeg" alt="Visionaire Logo" width={44} height={44} className="rounded-full object-cover shadow-sm" />
+          <span className="font-serif text-lg md:text-xl tracking-widest uppercase font-bold text-primary whitespace-nowrap">
             Visionaire
-            <span className="block text-[8px] md:text-[10px] font-sans tracking-[0.2em] font-normal text-supporting mt-1">
+            <span className="block text-[7px] md:text-[9px] font-sans tracking-[0.2em] font-normal text-supporting mt-1">
               ENGINEERING & INTERIORS
             </span>
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex gap-3 xl:gap-6 items-center">
+        <nav className="hidden lg:flex gap-2 xl:gap-4 2xl:gap-6 items-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -69,21 +69,21 @@ export default function Header() {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }
               }}
-              className="text-[10px] xl:text-xs font-semibold uppercase tracking-widest text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap"
+              className="text-[9px] xl:text-[10px] 2xl:text-xs font-semibold uppercase tracking-[0.1em] text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap"
             >
               {link.name}
             </Link>
           ))}
           
           {/* Contact Icons */}
-          <div className="flex items-center gap-3 xl:gap-4 ml-1 border-l border-gray-300 pl-3 xl:pl-6">
+          <div className="flex items-center gap-3 xl:gap-4 ml-1 border-l border-gray-300 pl-3 xl:pl-4">
             <a 
               href="tel:+919502656037" 
               className="flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap" 
               title="Call Us"
             >
               <Phone size={18} />
-              <span className="hidden xl:inline text-sm font-semibold tracking-wider whitespace-nowrap">+91 95026 56037</span>
+              <span className="hidden 2xl:inline text-sm font-semibold tracking-wider whitespace-nowrap">+91 95026 56037</span>
             </a>
             <a 
               href="https://wa.me/919502656037" 
