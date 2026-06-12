@@ -49,32 +49,32 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8 items-center">
+        <nav className="hidden lg:flex gap-5 xl:gap-8 items-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-xs font-semibold uppercase tracking-[0.15em] text-primary hover:text-accent transition-colors duration-300"
+              className="text-xs font-semibold uppercase tracking-[0.15em] text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap"
             >
               {link.name}
             </Link>
           ))}
           
           {/* Contact Icons */}
-          <div className="flex items-center gap-5 ml-2 border-l border-gray-300 pl-8">
+          <div className="flex items-center gap-4 xl:gap-5 ml-2 border-l border-gray-300 pl-4 xl:pl-8">
             <a 
               href="tel:+919502656037" 
-              className="flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300" 
+              className="flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 whitespace-nowrap" 
               title="Call Us"
             >
               <Phone size={18} />
-              <span className="text-sm font-semibold tracking-wider">+91 95026 56037</span>
+              <span className="text-sm font-semibold tracking-wider whitespace-nowrap">+91 95026 56037</span>
             </a>
             <a 
               href="https://wa.me/919502656037" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-[#25D366] hover:opacity-80 transition-opacity duration-300" 
+              className="text-[#25D366] hover:opacity-80 transition-opacity duration-300 flex-shrink-0" 
               title="WhatsApp Us"
             >
               <WhatsAppIcon size={22} />
@@ -84,7 +84,7 @@ export default function Header() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-primary"
+          className="lg:hidden text-primary"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
