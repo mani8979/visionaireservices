@@ -20,6 +20,7 @@ export default function Header() {
   }, []);
 
   const navLinks = [
+    { name: "Home", href: "/" },
     { name: "Architecture", href: "/architecture" },
     { name: "Constructions", href: "/constructions" },
     { name: "Interiors", href: "/interiors" },
