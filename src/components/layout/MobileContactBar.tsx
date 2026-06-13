@@ -4,8 +4,8 @@ import { Phone } from "lucide-react";
 import { WhatsAppIcon } from "../icons/WhatsAppIcon";
 
 export default function MobileContactBar() {
-  const phoneNumber = "+917780594495";
-  const whatsappNumber = "917780594495"; // without + for API link
+  const phoneNumber = "+919522298777";
+  const whatsappNumber = "919522298777"; // without + for API link
   
   return (
     <div className="md:hidden fixed bottom-0 left-0 w-full z-50 bg-secondary/95 backdrop-blur-md shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] flex border-t border-gray-200">
