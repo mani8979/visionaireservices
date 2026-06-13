@@ -20,10 +20,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://visionaireservices.com"),
   title: "VISIONAIRE SERVICES | Premium Architecture & Interiors",
   description: "Modern architecture and construction solutions designed with precision, elegance, and functionality.",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
