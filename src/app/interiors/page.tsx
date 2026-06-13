@@ -1,5 +1,17 @@
 import { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Interiors' };
+
+export const metadata: Metadata = {
+  title: 'Interiors',
+  description: 'Luxury interior design services in Visakhapatnam. Transforming spaces with premium aesthetics, custom wardrobes, modular kitchens, and elegant furnishings.',
+  alternates: {
+    canonical: 'https://visionaireservices.com/interiors',
+  },
+  openGraph: {
+    title: 'Interiors | VISIONAIRE SERVICES',
+    description: 'Luxury interior design services in Visakhapatnam. Transforming spaces with premium aesthetics, custom wardrobes, modular kitchens, and elegant furnishings.',
+    url: 'https://visionaireservices.com/interiors',
+  }
+};
 
 export const dynamic = 'force-dynamic';
 

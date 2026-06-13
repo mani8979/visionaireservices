@@ -1,5 +1,17 @@
 import { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Constructions' };
+
+export const metadata: Metadata = {
+  title: 'Constructions',
+  description: 'Premium construction services in Visakhapatnam. Delivering high-quality residential, commercial, and industrial construction projects on time and within budget.',
+  alternates: {
+    canonical: 'https://visionaireservices.com/constructions',
+  },
+  openGraph: {
+    title: 'Constructions | VISIONAIRE SERVICES',
+    description: 'Premium construction services in Visakhapatnam. Delivering high-quality residential, commercial, and industrial construction projects on time and within budget.',
+    url: 'https://visionaireservices.com/constructions',
+  }
+};
 
 export const dynamic = 'force-dynamic';
 

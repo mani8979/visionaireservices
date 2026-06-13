@@ -1,5 +1,17 @@
 import { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Architectures' };
+
+export const metadata: Metadata = {
+  title: 'Architectures',
+  description: 'Expert architectural design services in Visakhapatnam. We conceptualize and design residential and commercial spaces that are beautiful and highly functional.',
+  alternates: {
+    canonical: 'https://visionaireservices.com/architecture',
+  },
+  openGraph: {
+    title: 'Architectures | VISIONAIRE SERVICES',
+    description: 'Expert architectural design services in Visakhapatnam. We conceptualize and design residential and commercial spaces that are beautiful and highly functional.',
+    url: 'https://visionaireservices.com/architecture',
+  }
+};
 
 export const dynamic = 'force-dynamic';
 

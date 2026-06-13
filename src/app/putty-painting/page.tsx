@@ -1,5 +1,17 @@
 import { Metadata } from 'next';
-export const metadata: Metadata = { title: 'Putty Painting' };
+
+export const metadata: Metadata = {
+  title: 'Putty Painting',
+  description: 'High-quality wall putty and painting services in Visakhapatnam. Achieve flawless finishes and vibrant colors for your interiors and exteriors.',
+  alternates: {
+    canonical: 'https://visionaireservices.com/putty-painting',
+  },
+  openGraph: {
+    title: 'Putty Painting | VISIONAIRE SERVICES',
+    description: 'High-quality wall putty and painting services in Visakhapatnam. Achieve flawless finishes and vibrant colors for your interiors and exteriors.',
+    url: 'https://visionaireservices.com/putty-painting',
+  }
+};
 
 export const dynamic = 'force-dynamic';
 

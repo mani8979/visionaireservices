@@ -1,5 +1,17 @@
 import { Metadata } from 'next';
-export const metadata: Metadata = { title: 'False Ceiling' };
+
+export const metadata: Metadata = {
+  title: 'False Ceiling',
+  description: 'Professional false ceiling and gypsum ceiling installations in Visakhapatnam for modern homes and commercial spaces.',
+  alternates: {
+    canonical: 'https://visionaireservices.com/false-ceiling',
+  },
+  openGraph: {
+    title: 'False Ceiling | VISIONAIRE SERVICES',
+    description: 'Professional false ceiling and gypsum ceiling installations in Visakhapatnam for modern homes and commercial spaces.',
+    url: 'https://visionaireservices.com/false-ceiling',
+  }
+};
 
 export const dynamic = 'force-dynamic';
 
