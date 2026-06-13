@@ -24,6 +24,7 @@ export default function ProfileLightingClient({ data }: Props) {
         <div className="absolute inset-0 z-0">
           <Image src={data?.heroImageUrl || "/images/profile_lighting.png"} alt="Profile Lighting Hero" fill className="object-cover object-center"
             priority
+            unoptimized={true}
           />
           <div className="absolute inset-0 bg-primary/50"></div>
         </div>
@@ -62,7 +63,7 @@ export default function ProfileLightingClient({ data }: Props) {
             transition={{ duration: 1 }}
             className="relative aspect-video w-full rounded-sm overflow-hidden shadow-2xl order-2 lg:order-1"
           >
-            <Image src={data?.mainImageUrl || "/images/profile_lighting.png"} alt="Profile Lighting Details" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover transition-transform duration-[2s] hover:scale-105" />
+            <Image src={data?.mainImageUrl || "/images/profile_lighting.png"} alt="Profile Lighting Details" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover transition-transform duration-[2s] hover:scale-105" unoptimized={true} />
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, x: 30 }}

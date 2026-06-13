@@ -25,7 +25,7 @@ export default function PuttyPaintingClient({ data }: Props) {
         <div className="absolute inset-0 z-0">
           <Image src={data?.heroImageUrl || "/images/putty_painting.png"} alt="Putty Painting Hero" fill className="object-cover object-center"
             priority
-          />
+          unoptimized={true} />
           <div className="absolute inset-0 bg-primary/50"></div>
         </div>
         <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
@@ -84,7 +84,7 @@ export default function PuttyPaintingClient({ data }: Props) {
             transition={{ duration: 1 }}
             className="relative aspect-[3/4] md:aspect-[4/5] group overflow-hidden rounded-sm shadow-xl"
           >
-            <Image src={data?.beforeImageUrl || "/images/constructions_hero.png"} alt="Surface Preparation" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover transition-transform duration-[2s] group-hover:scale-105" />
+            <Image src={data?.beforeImageUrl || "/images/constructions_hero.png"} alt="Surface Preparation" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover transition-transform duration-[2s] group-hover:scale-105" unoptimized={true} />
             <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
               <span className="text-secondary font-serif text-2xl lg:text-3xl tracking-wide">Before / Prep</span>
             </div>
@@ -96,7 +96,7 @@ export default function PuttyPaintingClient({ data }: Props) {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative aspect-[3/4] md:aspect-[4/5] group overflow-hidden rounded-sm shadow-xl"
           >
-            <Image src={data?.afterImageUrl || "/images/putty_painting.png"} alt="Flawless Finish" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover transition-transform duration-[2s] group-hover:scale-105" />
+            <Image src={data?.afterImageUrl || "/images/putty_painting.png"} alt="Flawless Finish" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover transition-transform duration-[2s] group-hover:scale-105" unoptimized={true} />
             <div className="absolute inset-0 bg-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-sm">
               <span className="text-secondary font-serif text-2xl lg:text-3xl tracking-wide">Flawless Finish</span>
             </div>

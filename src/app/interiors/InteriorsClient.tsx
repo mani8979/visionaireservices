@@ -42,7 +42,7 @@ export default function InteriorsClient({ data }: Props) {
             fill
             className="object-cover object-center"
             priority
-          />
+          unoptimized={true} />
           <div className="absolute inset-0 bg-primary/40"></div>
         </div>
         <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
@@ -93,7 +93,7 @@ export default function InteriorsClient({ data }: Props) {
             transition={{ duration: 1 }}
             className="lg:col-span-8 relative aspect-[4/5] md:aspect-[16/9] order-1 lg:order-2 w-full shadow-2xl"
           >
-            <Image src={data?.livingImageUrl || "/images/interiors_hero.png"} alt="Living Spaces" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover" />
+            <Image src={data?.livingImageUrl || "/images/interiors_hero.png"} alt="Living Spaces" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover" unoptimized={true} />
           </motion.div>
         </div>
 
@@ -106,7 +106,7 @@ export default function InteriorsClient({ data }: Props) {
             transition={{ duration: 1 }}
             className="lg:col-span-7 relative aspect-[4/5] md:aspect-[4/3] w-full shadow-2xl"
           >
-            <Image src={data?.kitchenImageUrl || "/images/kitchen_interior.png"} alt="Kitchen Design" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover" />
+            <Image src={data?.kitchenImageUrl || "/images/kitchen_interior.png"} alt="Kitchen Design" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover" unoptimized={true} />
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -143,7 +143,7 @@ export default function InteriorsClient({ data }: Props) {
             transition={{ duration: 1 }}
             className="relative aspect-[3/4] md:aspect-square w-full shadow-2xl order-1 md:order-2"
           >
-            <Image src={data?.bedroomImageUrl || "/images/bedroom_interior.png"} alt="Bedroom Design" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover" />
+            <Image src={data?.bedroomImageUrl || "/images/bedroom_interior.png"} alt="Bedroom Design" width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="w-full h-auto object-cover" unoptimized={true} />
           </motion.div>
         </div>
       </section>
