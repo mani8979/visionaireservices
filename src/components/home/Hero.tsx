@@ -13,13 +13,17 @@ interface HeroProps {
 }
 
 export default function Hero({ data }: HeroProps) {
+  const formattedTitle = data?.heroTitle ? data.heroTitle.replace(/(\\|\/)n/gi, '\n') : "INFINITY\nTHOUGHTS";
+  const rawSubtitle = data?.heroSubtitle ? data.heroSubtitle.replace(/(\\|\/)n/gi, '\n') : "END TO END SERVICES\n\nDo you want to beautify your home like a rainbow? Contact Visionaire Engineering & Interiors now.";
+  const subtitleParts = rawSubtitle.split('\n\n');
+
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src={data?.heroImageUrl || "/images/hero_architecture.png"}
-          alt={data?.heroTitle || "Modern Architecture"}
+          alt={formattedTitle}
           fill
           className="object-cover object-center"
           priority
@@ -35,7 +39,7 @@ export default function Hero({ data }: HeroProps) {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-5xl md:text-7xl lg:text-8xl font-serif text-secondary tracking-tight mb-6 uppercase whitespace-pre-wrap"
         >
-          {data?.heroTitle ? data.heroTitle.replace(/\\n/g, '\n') : "INFINITY\nTHOUGHTS"}
+          {formattedTitle}
         </motion.h1>
         
         <motion.p
@@ -44,17 +48,19 @@ export default function Hero({ data }: HeroProps) {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="text-xs md:text-sm text-secondary/90 font-medium tracking-[0.25em] uppercase mb-8 whitespace-pre-wrap"
         >
-          {data?.heroSubtitle ? data.heroSubtitle.split('\\n\\n')[0] : "END TO END SERVICES"}
+          {subtitleParts[0]}
         </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          className="text-sm md:text-lg text-secondary/80 font-light mb-12 max-w-2xl mx-auto whitespace-pre-wrap"
-        >
-          {data?.heroSubtitle && data.heroSubtitle.includes('\\n\\n') ? data.heroSubtitle.split('\\n\\n')[1] : "Do you want to beautify your home like a rainbow? Contact Visionaire Engineering & Interiors now."}
-        </motion.p>
+        {subtitleParts[1] && (
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+            className="text-sm md:text-lg text-secondary/80 font-light mb-12 max-w-2xl mx-auto whitespace-pre-wrap"
+          >
+            {subtitleParts[1]}
+          </motion.p>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
