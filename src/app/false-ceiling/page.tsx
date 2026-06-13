@@ -1,3 +1,6 @@
+import { Metadata } from 'next';
+export const metadata: Metadata = { title: 'False Ceiling' };
+
 export const dynamic = 'force-dynamic';
 
 import { client } from "@/sanity/client";
