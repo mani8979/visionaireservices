@@ -20,7 +20,7 @@ export default defineType({
       name: 'whatsappNumber',
       title: 'WhatsApp Number',
       type: 'string',
-      description: 'Include country code, no spaces (e.g. 917780594495)',
+      description: 'Include country code, no spaces (e.g. 919522298777)',
     }),
     defineField({
       name: 'footerDescription',
