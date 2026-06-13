@@ -8,7 +8,8 @@ export default defineType({
     defineField({
       name: 'heroTitle',
       title: 'Hero Title',
-      type: 'string',
+      type: 'text',
+      rows: 2,
     }),
     defineField({
       name: 'heroImage',
