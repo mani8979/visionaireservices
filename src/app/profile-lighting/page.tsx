@@ -26,7 +26,7 @@ export default async function ProfileLightingPage() {
     mainTitle,
     mainText,
     "mainImageUrl": mainImage.secure_url
-  }`);
+  }`, {}, { cache: "no-store" });
 
   return <ProfileLightingClient data={data} />;
 }

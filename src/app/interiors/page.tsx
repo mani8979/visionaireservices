@@ -39,7 +39,7 @@ export default async function InteriorsPage() {
     testimonial2Text,
     testimonial2Author,
     testimonial2Role
-  }`);
+  }`, {}, { cache: "no-store" });
 
   return <InteriorsClient data={data} />;
 }

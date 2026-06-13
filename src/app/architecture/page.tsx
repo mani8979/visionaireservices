@@ -37,7 +37,7 @@ export default async function ArchitecturePage() {
     transformationsText,
     "beforeImageUrl": beforeImage.secure_url,
     "afterImageUrl": afterImage.secure_url
-  }`);
+  }`, {}, { cache: "no-store" });
 
   return <ArchitectureClient data={data} />;
 }

@@ -37,7 +37,7 @@ export default async function ConstructionsPage() {
     transformationsText,
     "beforeImageUrl": beforeImage.secure_url,
     "afterImageUrl": afterImage.secure_url
-  }`);
+  }`, {}, { cache: "no-store" });
 
   return <ConstructionsClient data={data} />;
 }

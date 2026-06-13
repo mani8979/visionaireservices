@@ -26,7 +26,7 @@ export default async function FalseCeilingPage() {
     mainTitle,
     mainText,
     "mainImageUrl": mainImage.secure_url
-  }`);
+  }`, {}, { cache: "no-store" });
 
   return <FalseCeilingClient data={data} />;
 }

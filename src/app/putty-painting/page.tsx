@@ -27,7 +27,7 @@ export default async function PuttyPaintingPage() {
     mainText,
     "beforeImageUrl": beforeImage.secure_url,
     "afterImageUrl": afterImage.secure_url
-  }`);
+  }`, {}, { cache: "no-store" });
 
   return <PuttyPaintingClient data={data} />;
 }
