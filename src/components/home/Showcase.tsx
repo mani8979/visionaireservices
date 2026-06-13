@@ -45,7 +45,7 @@ export default function Showcase({ data }: ShowcaseProps) {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {displayProjects.map((project, index) => (
             <motion.div
               key={index}
@@ -53,15 +53,16 @@ export default function Showcase({ data }: ShowcaseProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`group relative overflow-hidden bg-secondary/5 rounded-sm ${index % 2 !== 0 ? 'md:mt-24' : ''}`}
+              className="group relative overflow-hidden bg-secondary/5 rounded-sm"
             >
               <Link href={project.link || "#"} className="block w-full">
-                <div className="relative aspect-[4/5] w-full overflow-hidden">
+                <div className="relative w-full overflow-hidden">
                   <Image
                     src={project.imageUrl || "/images/placeholder.png"}
                     alt={project.title}
-                    fill
-                    className="object-cover object-center transition-transform duration-[2s] ease-out group-hover:scale-105"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto object-contain transition-transform duration-[2s] ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500" />
                 </div>

@@ -18,14 +18,14 @@ export default function Hero({ data }: HeroProps) {
   const subtitleParts = rawSubtitle.split('\n\n');
 
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-[#1a1a1a]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src={data?.heroImageUrl || "/images/hero_architecture.png"}
           alt={formattedTitle}
           fill
-          className="object-cover object-center"
+          className="object-contain md:object-cover object-center"
           priority
         />
         {/* Dark Overlay for contrast */}
