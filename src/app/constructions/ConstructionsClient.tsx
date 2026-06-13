@@ -169,7 +169,7 @@ export default function ConstructionsClient({ data }: Props) {
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1, delay: 0.2 }} className="relative w-full h-fit group overflow-hidden rounded-sm shadow-lg">
              <Image src={data?.afterImageUrl || "/images/hero_architecture.png"} alt="After Construction" width={800} height={800} className="w-full max-h-[70vh] object-contain transition-transform duration-[2s] group-hover:scale-105" />
-             <div className="absolute top-6 right-6 bg-accent/90 text-secondary px-6 py-3 text-xs font-semibold tracking-[0.2em] uppercase backdrop-blur-sm">Final Delivery</div>
+             <div className="absolute top-6 left-6 bg-accent/90 text-secondary px-6 py-3 text-xs font-semibold tracking-[0.2em] uppercase backdrop-blur-sm">Final Delivery</div>
           </motion.div>
         </div>
       </section>
