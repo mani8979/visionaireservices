@@ -56,13 +56,12 @@ export default function Showcase({ data }: ShowcaseProps) {
               className="group relative overflow-hidden bg-secondary/5 rounded-sm"
             >
               <Link href={project.link || "#"} className="block w-full">
-                <div className="relative w-full overflow-hidden">
+                <div className="relative aspect-[4/5] w-full overflow-hidden flex items-center justify-center">
                   <Image
                     src={project.imageUrl || "/images/placeholder.png"}
                     alt={project.title}
-                    width={800}
-                    height={600}
-                    className="w-full h-auto object-contain transition-transform duration-[2s] ease-out group-hover:scale-105"
+                    fill
+                    className="object-contain transition-transform duration-[2s] ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
