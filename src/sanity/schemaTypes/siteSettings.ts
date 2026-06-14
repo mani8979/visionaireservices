@@ -32,5 +32,21 @@ export default defineType({
       title: 'Office Address',
       type: 'text',
     }),
+    defineField({
+      name: 'clients',
+      title: 'Clients List',
+      type: 'array',
+      description: 'List of clients shown on the Home and Interiors pages',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'name', title: 'Client Name', type: 'string' },
+            { name: 'role', title: 'Client Role / Specialty', type: 'string' },
+            { name: 'text', title: 'Testimonial Text', type: 'text' }
+          ]
+        }
+      ]
+    }),
   ],
 })

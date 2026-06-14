@@ -42,5 +42,7 @@ export default async function InteriorsPage() {
     testimonial2Role
   }`, {}, { cache: "no-store" });
 
-  return <InteriorsClient data={data} />;
+  const siteSettings = await client.fetch(`*[_type == "siteSettings"][0] { clients }`);
+
+  return <InteriorsClient data={data} clients={siteSettings?.clients} />;
 }

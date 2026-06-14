@@ -42,6 +42,8 @@ export default async function Home() {
     }
   }`);
 
+  const siteSettings = await client.fetch(`*[_type == "siteSettings"][0] { clients }`);
+
   return (
     <>
       <Hero data={homeData} />
@@ -61,7 +63,7 @@ export default async function Home() {
         subtitle: homeData.featuredWorkSubtitle,
         projects: homeData.featuredProjects
       }} />
-      <Clients />
+      <Clients clients={siteSettings?.clients} />
       <ContactCTA />
     </>
   );
