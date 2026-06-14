@@ -162,50 +162,26 @@ export default function InteriorsClient({ data }: Props) {
             <div className="w-16 h-[1px] bg-accent mx-auto mt-12" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="bg-secondary/5 p-12 md:p-16 rounded-sm relative shadow-xl backdrop-blur-sm border border-secondary/10"
-            >
-              <Quote className="absolute top-8 left-8 text-secondary/10 w-20 h-20" />
-              <p className="text-lg md:text-2xl font-light leading-relaxed mb-12 relative z-10 font-serif italic text-secondary/90">
-                "{data?.testimonial1Text || "Visionaire Services transformed our penthouse into a masterpiece."}"
-              </p>
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center text-accent font-serif text-2xl border border-secondary/20">
-                  {data?.testimonial1Author ? data.testimonial1Author.charAt(0) : "A"}
-                </div>
-                <div>
-                  <h4 className="font-serif text-xl text-secondary mb-1">{data?.testimonial1Author || "Alexander M."}</h4>
-                  <p className="text-xs uppercase tracking-[0.2em] font-semibold text-accent/80">{data?.testimonial1Role || "Private Residence"}</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-secondary/5 p-12 md:p-16 rounded-sm relative shadow-xl backdrop-blur-sm border border-secondary/10"
-            >
-              <Quote className="absolute top-8 left-8 text-secondary/10 w-20 h-20" />
-              <p className="text-lg md:text-2xl font-light leading-relaxed mb-12 relative z-10 font-serif italic text-secondary/90">
-                "{data?.testimonial2Text || "Their approach to commercial interiors completely revitalized our office space."}"
-              </p>
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center text-accent font-serif text-2xl border border-secondary/20">
-                  {data?.testimonial2Author ? data.testimonial2Author.charAt(0) : "E"}
-                </div>
-                <div>
-                  <h4 className="font-serif text-xl text-secondary mb-1">{data?.testimonial2Author || "Elena R."}</h4>
-                  <p className="text-xs uppercase tracking-[0.2em] font-semibold text-accent/80">{data?.testimonial2Role || "Corporate Headquarters"}</p>
-                </div>
-              </div>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { name: "Dr Chaitanya", role: "anaesthesia" },
+              { name: "Dr. Padala Ashok", role: "orthopedist" },
+              { name: "Dr.Petla Naidu", role: "scientist" },
+              { name: "Mr Sateesh", role: "Jaya enterprises" },
+              { name: "Dr Akhila", role: "pathologist" },
+            ].map((client, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-secondary/5 p-8 md:p-10 rounded-sm shadow-xl backdrop-blur-sm border border-secondary/10 flex flex-col justify-center text-center"
+              >
+                <h4 className="font-serif text-2xl text-secondary mb-2">{client.name}</h4>
+                <p className="text-xs uppercase tracking-[0.2em] font-semibold text-accent/80">{client.role}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

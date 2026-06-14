@@ -7,6 +7,7 @@ import Services from "@/components/home/Services";
 import Process from "@/components/home/Process";
 import Showcase from "@/components/home/Showcase";
 import ContactCTA from "@/components/home/ContactCTA";
+import Clients from "@/components/home/Clients";
 
 export default async function Home() {
   const homeData = await client.fetch(`*[_type == "homePage"][0] {
@@ -60,6 +61,7 @@ export default async function Home() {
         subtitle: homeData.featuredWorkSubtitle,
         projects: homeData.featuredProjects
       }} />
+      <Clients />
       <ContactCTA />
     </>
   );
