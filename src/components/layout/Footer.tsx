@@ -25,6 +25,7 @@ export default function Footer() {
         <div>
           <h4 className="font-serif text-lg mb-8 tracking-wide text-accent">Services</h4>
           <ul className="space-y-4 text-sm font-light tracking-wide text-secondary/70">
+            <li><Link href="/architecture" className="hover:text-secondary transition-colors">Architecture</Link></li>
             <li><Link href="/constructions" className="hover:text-secondary transition-colors">Constructions</Link></li>
             <li><Link href="/interiors" className="hover:text-secondary transition-colors">Interiors</Link></li>
             <li><Link href="/false-ceiling" className="hover:text-secondary transition-colors">False Ceiling</Link></li>
