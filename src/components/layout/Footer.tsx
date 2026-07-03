@@ -43,8 +43,25 @@ export default function Footer() {
             <li>+91 95222 98777</li>
             <li>www.visionaireservices.com</li>
             <li>connect@visionaireservices.com</li>
-            <li className="leading-relaxed">Plot No: 960, Beside Aditya Fortuner Near Kushi Shop,<br/>Midhilapuri Vuda Colony,<br/>Madhurawada, Visakhapatnam - 530041</li>
+            <li className="leading-relaxed">
+              <strong>Visionaire Services</strong><br/>
+              Plot No. 960,<br/>
+              Beside Aditya Fortuner,<br/>
+              Near Kushi Shop,<br/>
+              Midhilapuri VUDA Colony,<br/>
+              Madhurawada,<br/>
+              Visakhapatnam,<br/>
+              Andhra Pradesh &ndash; 530041
+            </li>
           </ul>
+        </div>
+
+        {/* Service Area */}
+        <div>
+          <h4 className="font-serif text-lg mb-8 tracking-wide text-accent">Service Area</h4>
+          <p className="text-sm font-light leading-relaxed text-secondary/70">
+            Visionaire Services is headquartered in Madhurawada, Visakhapatnam, and proudly serves clients across Visakhapatnam, Vizianagaram, Srikakulam, Vijayawada, Rajahmundry, Kakinada, Guntur, Nellore, Tirupati, Kurnool, Hyderabad, Warangal, Khammam, Karimnagar, and other cities throughout Andhra Pradesh and Telangana.
+          </p>
         </div>
       </div>
 

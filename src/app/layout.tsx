@@ -67,39 +67,269 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Visionaire Engineering & Interiors",
-  "image": "https://visionaireservices.com/icon.jpeg",
-  "url": "https://visionaireservices.com",
-  "telephone": "+919522298777",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Plot No: 960, Beside Aditya Fortuner Near Kushi Shop, Midhilapuri Vuda Colony",
-    "addressLocality": "Madhurawada",
-    "addressRegion": "Andhra Pradesh",
-    "postalCode": "530041",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 17.8174,
-    "longitude": 83.3551
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:00",
-    "closes": "18:00"
-  },
-  "sameAs": [
-    "https://visionaireservices.com"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://visionaireservices.com/#website",
+      "url": "https://visionaireservices.com",
+      "name": "Visionaire Services",
+      "description": "Looking for the best interior designers in Visakhapatnam? Visionaire Services offers premium home interiors, office interiors, modular kitchens, wardrobes, false ceilings, TV units and turnkey interior solutions across Andhra Pradesh & Telangana.",
+      "publisher": {
+        "@id": "https://visionaireservices.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://visionaireservices.com/#organization",
+      "name": "Visionaire Services",
+      "url": "https://visionaireservices.com",
+      "logo": "https://visionaireservices.com/icon.jpeg",
+      "image": "https://visionaireservices.com/icon.jpeg",
+      "sameAs": [
+        "https://visionaireservices.com"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://visionaireservices.com/#localbusiness",
+      "name": "Visionaire Services",
+      "image": "https://visionaireservices.com/icon.jpeg",
+      "url": "https://visionaireservices.com",
+      "telephone": "+919522298777",
+      "email": "connect@visionaireservices.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot No. 960, Beside Aditya Fortuner, Near Kushi Shop, Midhilapuri VUDA Colony, Madhurawada",
+        "addressLocality": "Visakhapatnam",
+        "addressRegion": "Andhra Pradesh",
+        "postalCode": "530041",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 17.8174,
+        "longitude": 83.3551
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://visionaireservices.com"
+      ],
+      "areaServed": [
+        "Visakhapatnam",
+        "Madhurawada",
+        "Vizag",
+        "Gajuwaka",
+        "MVP Colony",
+        "PM Palem",
+        "Anandapuram",
+        "Bheemunipatnam",
+        "Vizianagaram",
+        "Vijayawada",
+        "Kakinada",
+        "Rajahmundry",
+        "Guntur",
+        "Nellore",
+        "Tirupati",
+        "Kurnool",
+        "Warangal",
+        "Khammam",
+        "Karimnagar",
+        "Hyderabad",
+        "Andhra Pradesh",
+        "Telangana"
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://visionaireservices.com/#image",
+      "url": "https://visionaireservices.com/icon.jpeg",
+      "caption": "Visionaire Services Logo",
+      "width": "1200",
+      "height": "630"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://visionaireservices.com/#services",
+      "serviceType": "Interior Design, Architectural Design, Civil Construction",
+      "provider": {
+        "@id": "https://visionaireservices.com/#localbusiness"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Andhra Pradesh"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Telangana"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Visionaire Services Catalog",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Interior Design",
+              "description": "Premium residential and commercial interiors, custom wardrobes, modular kitchens, and false ceilings."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Architecture",
+              "description": "Custom modern residential design, elevation design, spatial planning, and commercial space blueprints."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Construction",
+              "description": "Civil contracting, turnkey buildings, villas, apartments, and structural layout executions."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://visionaireservices.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is the best interior designer in Visakhapatnam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Visionaire Services is highly regarded as one of the best interior design firms in Visakhapatnam, offering premium home interiors, office interiors, modular kitchens, wardrobes, false ceilings, and turnkey interior solutions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Visionaire Services located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Visionaire Services is headquartered at Plot No. 960, Beside Aditya Fortuner, Near Kushi Shop, Midhilapuri VUDA Colony, Madhurawada, Visakhapatnam, Andhra Pradesh – 530041."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We proudly serve clients across Visakhapatnam, Madhurawada, Vizag, Gajuwaka, MVP Colony, PM Palem, Vizianagaram, Vijayawada, Kakinada, Rajahmundry, Guntur, Nellore, Tirupati, Kurnool, Hyderabad, Warangal, Khammam, Karimnagar, and other cities throughout Andhra Pradesh and Telangana."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://visionaireservices.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://visionaireservices.com"
+        }
+      ]
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@id": "https://visionaireservices.com/#localbusiness"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Dr Chaitanya"
+      },
+      "reviewBody": "The precision and attention to detail Visionaire Services brought to our home design was truly exceptional. The soothing ambiance they created is perfect after a long day at the hospital."
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@id": "https://visionaireservices.com/#localbusiness"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Padala Ashok"
+      },
+      "reviewBody": "They designed an incredibly ergonomic and beautifully structured living space. The entire process was seamless, and the final result exceeded our expectations."
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@id": "https://visionaireservices.com/#localbusiness"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Dr.Petla Naidu"
+      },
+      "reviewBody": "I was thoroughly impressed by their innovative approach to space utilization. Visionaire Services perfectly blended modern aesthetics with practical functionality."
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@id": "https://visionaireservices.com/#localbusiness"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Mr Sateesh"
+      },
+      "reviewBody": "Visionaire Services transformed our commercial space into a premium, highly functional environment. Their professionalism and timely delivery were outstanding."
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@id": "https://visionaireservices.com/#localbusiness"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Dr Akhila"
+      },
+      "reviewBody": "The meticulous design and elegant interiors have completely revitalized our home. I highly recommend their exceptional interior and architectural services."
+    }
   ]
 };
 
